@@ -76,6 +76,10 @@ public class SingleLinkedListMain {
                 success("Inserting a node after position " + position);
                 break;
             case 7:
+                node = makeNewNode();
+                position = specifyPosition();
+                linkedList.insertPositionBefore(node, position);
+                success("Inserting a node before position " + position);
                 break;
             case 8:
                 break;

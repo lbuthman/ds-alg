@@ -82,6 +82,29 @@ public class SingleLinkedList {
         refNode.link = newNode;
     }
 
+    public void insertPositionBefore(Node newNode, int position) {
+        Node prev = null;
+        Node refNode = start;
+        if (refNode == null) {
+            insertEmpty(newNode);
+            return;
+        }
+
+        if (position == 0 || position == 1) {
+            newNode.link = start;
+            start = newNode;
+            return;
+        }
+
+        for (int i=1; i<position && refNode.link != null; i++) {
+            prev = refNode;
+            refNode = refNode.link;
+
+        }
+        newNode.link = refNode;
+        prev.link = newNode;
+    }
+
     private void insertEmpty(Node newNode) {
         start = newNode;
     }
