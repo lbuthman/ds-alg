@@ -1,5 +1,6 @@
 package ui;
 
+import linkedList.Node;
 import linkedList.SingleLinkedList;
 
 import java.util.Scanner;
@@ -57,6 +58,9 @@ public class SingleLinkedListMain {
                 findElement();
                 break;
             case 4:
+                Node node = insertNewNode();
+                linkedList.insertAtBeginning(node);
+                success("Inserting a node at the beginning");
                 break;
             case 5:
                 break;
@@ -87,6 +91,17 @@ public class SingleLinkedListMain {
             case 18:
                 break;
         }
+    }
+
+    private static void success(String operation) {
+        System.out.println(operation + " was successful!");
+        System.out.println();
+    }
+
+    private static Node insertNewNode() {
+        System.out.print("Enter the data int for the new node: ");
+        int info = scanner.nextInt();
+        return new Node(info);
     }
 
     private static void findElement() {
