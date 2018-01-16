@@ -38,6 +38,17 @@ public class SingleLinkedList {
         return count;
     }
 
+    public boolean isInList(int n) {
+        Node refNode = start;
+        while (refNode != null) {
+            if (refNode.info == n) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public void insertAtBeginning(Node newNode) {
         newNode.link = start;
         start = newNode;

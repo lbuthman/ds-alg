@@ -6,11 +6,10 @@ import java.util.Scanner;
 
 public class SingleLinkedListMain {
 
+    static Scanner scanner = new Scanner(System.in);
     static SingleLinkedList linkedList = new SingleLinkedList();
 
     public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
 
         while (true) {
             printMenu();
@@ -26,7 +25,7 @@ public class SingleLinkedListMain {
     private static void printMenu() {
         System.out.println("1. Display the list");
         System.out.println("2. Count the number of nodes");
-        System.out.println("3. Search for an element");
+        System.out.println("3. Find if an element is in the list");
         System.out.println("4. Insert into the beginning of the list");
         System.out.println("5. Insert at the end of the list");
         System.out.println("6. Insert after a specific node");
@@ -55,6 +54,7 @@ public class SingleLinkedListMain {
                 getCountOfNode();
                 break;
             case 3:
+                findElement();
                 break;
             case 4:
                 break;
@@ -87,6 +87,18 @@ public class SingleLinkedListMain {
             case 18:
                 break;
         }
+    }
+
+    private static void findElement() {
+        System.out.print("What number do you want to find? ");
+        int n = scanner.nextInt();
+        boolean wasFound = linkedList.isInList(n);
+        if (wasFound) {
+            System.out.println("Element " + n + " was found!");
+        } else {
+            System.out.println("Element " + n + " is not in the list.");
+        }
+        System.out.println();
     }
 
     private static void getCountOfNode() {
