@@ -45,6 +45,7 @@ public class SingleLinkedList {
             if (refNode.info == n) {
                 return true;
             }
+            refNode = refNode.link;
         }
 
         return false;
