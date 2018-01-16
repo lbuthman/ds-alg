@@ -5,55 +5,17 @@ import linkedList.SingleLinkedList;
 import java.util.Scanner;
 
 public class SingleLinkedListMain {
+
+    static SingleLinkedList linkedList = new SingleLinkedList();
+
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        SingleLinkedList singleLinkedList = null;
 
         while (true) {
             printMenu();
             int selection = scanner.nextInt();
-            switch (selection) {
-                case 1:
-                    break;
-                case 2:
-                    break;
-                case 3:
-                    break;
-                case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
-                    break;
-                case 7:
-                    break;
-                case 8:
-                    break;
-                case 9:
-                    break;
-                case 10:
-                    break;
-                case 11:
-                    break;
-                case 12:
-                    break;
-                case 13:
-                    break;
-                case 14:
-                    break;
-                case 15:
-                    break;
-                case 16:
-                    break;
-                case 17:
-                    break;
-                case 18:
-                    break;
-                case 19:
-                    System.out.println("Goodbye!");
-                    return;
-            }
+            handleInput(selection);
         }
     }
 
@@ -78,5 +40,50 @@ public class SingleLinkedListMain {
         System.out.println("18. Remove Cycle");
         System.out.println("19. Quit");
 
+    }
+
+    private static void handleInput(int i) {
+        switch (i) {
+            case 1:
+                linkedList.displayList();
+                break;
+            case 2:
+                break;
+            case 3:
+                break;
+            case 4:
+                break;
+            case 5:
+                break;
+            case 6:
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+            case 10:
+                break;
+            case 11:
+                break;
+            case 12:
+                break;
+            case 13:
+                break;
+            case 14:
+                break;
+            case 15:
+                break;
+            case 16:
+                break;
+            case 17:
+                break;
+            case 18:
+                break;
+            case 19:
+                System.out.println("Goodbye!");
+                return;
+        }
     }
 }
