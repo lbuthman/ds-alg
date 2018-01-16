@@ -48,6 +48,7 @@ public class SingleLinkedListMain {
 
     private static void handleInput(int i) {
         Node node;
+        int position;
         switch (i) {
             case 1:
                 linkedList.displayList();
@@ -59,16 +60,20 @@ public class SingleLinkedListMain {
                 findElement();
                 break;
             case 4:
-                node = insertNewNode();
+                node = makeNewNode();
                 linkedList.insertAtBeginning(node);
                 success("Inserting a node at the beginning");
                 break;
             case 5:
-                node = insertNewNode();
+                node = makeNewNode();
                 linkedList.insertAtEnd(node);
                 success("Inserting a node at the end");
                 break;
             case 6:
+                node = makeNewNode();
+                position = specifyPosition();
+                linkedList.insertPositionAfter(node, position);
+                success("Inserting a node after position " + position);
                 break;
             case 7:
                 break;
@@ -97,12 +102,17 @@ public class SingleLinkedListMain {
         }
     }
 
+    private static int specifyPosition() {
+        System.out.print("What position do you want to specify? ");
+        return scanner.nextInt();
+    }
+
     private static void success(String operation) {
         System.out.println(operation + " was successful!");
         System.out.println();
     }
 
-    private static Node insertNewNode() {
+    private static Node makeNewNode() {
         System.out.print("Enter the data int for the new node: ");
         int info = scanner.nextInt();
         return new Node(info);

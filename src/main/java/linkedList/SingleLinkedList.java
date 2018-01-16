@@ -58,7 +58,7 @@ public class SingleLinkedList {
 
     public void insertAtEnd(Node newNode) {
         if (start == null) {
-            start = newNode;
+            insertEmpty(newNode);
             return;
         }
         Node refNode = start;
@@ -66,5 +66,23 @@ public class SingleLinkedList {
             refNode = refNode.link;
         }
         refNode.link = newNode;
+    }
+
+    public void insertPositionAfter(Node newNode, int position) {
+        Node refNode = start;
+        if (refNode == null) {
+            insertEmpty(newNode);
+            return;
+        }
+
+        for (int i=1; i<position && refNode.link != null; i++) {
+            refNode = refNode.link;
+        }
+        newNode.link = refNode.link;
+        refNode.link = newNode;
+    }
+
+    private void insertEmpty(Node newNode) {
+        start = newNode;
     }
 }
