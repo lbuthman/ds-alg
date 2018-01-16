@@ -14,10 +14,11 @@ public class SingleLinkedList {
             System.out.println();
             return;
         }
-        System.out.println("The List is: ");
+        System.out.print("The List is: ");
         Node refNode = start;
         while (refNode != null) {
             System.out.print(refNode.info + " ");
+            refNode = refNode.link;
         }
         System.out.println();
     }
