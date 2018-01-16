@@ -22,24 +22,7 @@ public class SingleLinkedList {
         System.out.println();
     }
 
-    public void insertAtBeginning(Node newNode) {
-        newNode.link = start;
-        start = newNode;
-    }
-
-    public void insertAtEnd(Node newNode) {
-        Node refNode = start;
-        while (refNode.link != null) {
-            refNode = refNode.link;
-        }
-        refNode.link = newNode;
-    }
-
-    public Node getStart() {
-        return start;
-    }
-
-    public int size() {
+    public int countNodes() {
         int count = 0;
         Node refNode = start;
 
@@ -53,5 +36,18 @@ public class SingleLinkedList {
         }
 
         return count;
+    }
+
+    public void insertAtBeginning(Node newNode) {
+        newNode.link = start;
+        start = newNode;
+    }
+
+    public void insertAtEnd(Node newNode) {
+        Node refNode = start;
+        while (refNode.link != null) {
+            refNode = refNode.link;
+        }
+        refNode.link = newNode;
     }
 }

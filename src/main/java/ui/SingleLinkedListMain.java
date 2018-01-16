@@ -48,6 +48,7 @@ public class SingleLinkedListMain {
                 linkedList.displayList();
                 break;
             case 2:
+                getCountOfNode();
                 break;
             case 3:
                 break;
@@ -85,5 +86,10 @@ public class SingleLinkedListMain {
                 System.out.println("Goodbye!");
                 return;
         }
+    }
+
+    private static void getCountOfNode() {
+        int count = linkedList.countNodes();
+        System.out.println("There are " + count + " nodes in the list.");
     }
 }
