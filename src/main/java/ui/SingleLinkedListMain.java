@@ -15,6 +15,10 @@ public class SingleLinkedListMain {
         while (true) {
             printMenu();
             int selection = scanner.nextInt();
+            if (selection == 19) {
+                System.out.println("Goodbye!");
+                return;
+            }
             handleInput(selection);
         }
     }
@@ -82,9 +86,6 @@ public class SingleLinkedListMain {
                 break;
             case 18:
                 break;
-            case 19:
-                System.out.println("Goodbye!");
-                return;
         }
     }
 
