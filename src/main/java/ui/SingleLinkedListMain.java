@@ -47,6 +47,7 @@ public class SingleLinkedListMain {
     }
 
     private static void handleInput(int i) {
+        Node node;
         switch (i) {
             case 1:
                 linkedList.displayList();
@@ -58,11 +59,14 @@ public class SingleLinkedListMain {
                 findElement();
                 break;
             case 4:
-                Node node = insertNewNode();
+                node = insertNewNode();
                 linkedList.insertAtBeginning(node);
                 success("Inserting a node at the beginning");
                 break;
             case 5:
+                node = insertNewNode();
+                linkedList.insertAtEnd(node);
+                success("Inserting a node at the end");
                 break;
             case 6:
                 break;

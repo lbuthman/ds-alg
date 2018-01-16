@@ -56,6 +56,10 @@ public class SingleLinkedList {
     }
 
     public void insertAtEnd(Node newNode) {
+        if (start == null) {
+            start = newNode;
+            return;
+        }
         Node refNode = start;
         while (refNode.link != null) {
             refNode = refNode.link;
