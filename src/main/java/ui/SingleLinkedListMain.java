@@ -104,5 +104,6 @@ public class SingleLinkedListMain {
     private static void getCountOfNode() {
         int count = linkedList.countNodes();
         System.out.println("There are " + count + " nodes in the list.");
+        System.out.println();
     }
 }
