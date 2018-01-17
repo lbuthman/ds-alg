@@ -11,7 +11,6 @@ public class SingleLinkedList {
     public void displayList() {
         if (start == null) {
             System.out.println("The list is empty.");
-            System.out.println();
             return;
         }
         System.out.print("The List is: ");
@@ -20,7 +19,6 @@ public class SingleLinkedList {
             System.out.print(refNode.info + " ");
             refNode = refNode.link;
         }
-        System.out.println();
     }
 
     public int countNodes() {

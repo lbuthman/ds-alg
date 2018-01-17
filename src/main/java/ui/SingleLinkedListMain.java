@@ -15,6 +15,7 @@ public class SingleLinkedListMain {
     public static void main(String[] args) {
 
         while (true) {
+            System.out.println();
             printMenu();
             int selection = scanner.nextInt();
             if (selection == CLOSE_CODE) {
@@ -119,7 +120,6 @@ public class SingleLinkedListMain {
 
     private static void success(String operation) {
         System.out.println(operation + " was successful!");
-        System.out.println();
     }
 
     private static Node makeNewNode() {
@@ -137,12 +137,10 @@ public class SingleLinkedListMain {
         } else {
             System.out.println("Element " + n + " is not in the list.");
         }
-        System.out.println();
     }
 
     private static void getCountOfNode() {
         int count = linkedList.countNodes();
         System.out.println("There are " + count + " nodes in the list.");
-        System.out.println();
     }
 }
