@@ -7,6 +7,8 @@ import java.util.Scanner;
 
 public class SingleLinkedListMain {
 
+    private static final int CLOSE_CODE = 18;
+
     static Scanner scanner = new Scanner(System.in);
     static SingleLinkedList linkedList = new SingleLinkedList();
 
@@ -15,7 +17,7 @@ public class SingleLinkedListMain {
         while (true) {
             printMenu();
             int selection = scanner.nextInt();
-            if (selection == 19) {
+            if (selection == CLOSE_CODE) {
                 System.out.println("Goodbye!");
                 return;
             }
