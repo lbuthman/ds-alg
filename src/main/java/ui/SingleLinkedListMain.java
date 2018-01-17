@@ -97,6 +97,8 @@ public class SingleLinkedListMain {
                 success("Deleting node at position " + position);
                 break;
             case 11:
+                linkedList.reverseList();
+                success("Reversing the linked list");
                 break;
             case 12:
                 break;

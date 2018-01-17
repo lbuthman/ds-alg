@@ -147,4 +147,22 @@ public class SingleLinkedList {
         }
         refNode.link = refNode.link.link;
     }
+
+    public void reverseList() {
+        if (start == null) {
+            return;
+        }
+
+        Node prev = null;
+        Node current = start;
+        Node next = null;
+        while (current.link != null) {
+            next = current.link;
+            current.link = prev;
+            prev = current;
+            current = next;
+        }
+        current.link = prev;
+        start = next;
+    }
 }
