@@ -91,6 +91,9 @@ public class SingleLinkedListMain {
                 success("Deleting the last node");
                 break;
             case 10:
+                position = specifyPosition();
+                linkedList.deleteAtPosition(position);
+                success("Deleting node at position " + position);
                 break;
             case 11:
                 break;

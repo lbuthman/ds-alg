@@ -132,4 +132,21 @@ public class SingleLinkedList {
         }
         refNode.link = null;
     }
+
+    public void deleteAtPosition(int position) {
+        if (countNodes() == 0) {
+            return;
+        }
+
+        if (countNodes() == 1 || position == 1) {
+            deleteFirstNode();
+            return;
+        }
+
+        Node refNode = start;
+        for (int i=1; i<position && refNode.link.link != null; i++) {
+            refNode = refNode.link;
+        }
+        refNode.link = refNode.link.link;
+    }
 }
