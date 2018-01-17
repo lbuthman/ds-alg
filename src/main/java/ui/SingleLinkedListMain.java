@@ -85,6 +85,8 @@ public class SingleLinkedListMain {
                 success("Deleting the first node");
                 break;
             case 9:
+                linkedList.deleteLastNode();
+                success("Deleting the last node");
                 break;
             case 10:
                 break;

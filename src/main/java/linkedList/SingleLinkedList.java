@@ -115,4 +115,21 @@ public class SingleLinkedList {
         }
         start = start.link;
     }
+
+    public void deleteLastNode() {
+        if (countNodes() == 0) {
+            return;
+        }
+
+        if (countNodes() == 1) {
+            deleteFirstNode();
+            return;
+        }
+
+        Node refNode = start;
+        while (refNode.link.link != null) {
+            refNode = refNode.link;
+        }
+        refNode.link = null;
+    }
 }
