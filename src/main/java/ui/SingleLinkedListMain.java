@@ -81,6 +81,8 @@ public class SingleLinkedListMain {
                 success("Inserting a node before position " + position);
                 break;
             case 8:
+                linkedList.deleteFirstNode();
+                success("Deleting the first node");
                 break;
             case 9:
                 break;

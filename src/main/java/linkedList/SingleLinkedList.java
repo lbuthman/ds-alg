@@ -108,4 +108,11 @@ public class SingleLinkedList {
     private void insertEmpty(Node newNode) {
         start = newNode;
     }
+
+    public void deleteFirstNode() {
+        if (countNodes() == 0) {
+            return;
+        }
+        start = start.link;
+    }
 }
