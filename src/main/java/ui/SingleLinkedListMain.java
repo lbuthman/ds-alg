@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class SingleLinkedListMain {
 
-    private static final int CLOSE_CODE = 18;
+    private static final int CLOSE_CODE = 13;
 
     static Scanner scanner = new Scanner(System.in);
     static SingleLinkedList linkedList = new SingleLinkedList();
@@ -39,11 +39,7 @@ public class SingleLinkedListMain {
         System.out.println("10. Delete a specific node");
         System.out.println("11. Reverse the list");
         System.out.println("12. Bubble sort by exchanging data");
-        System.out.println("13. Merge sort");
-        System.out.println("14. Insert Cycle");
-        System.out.println("15. Detect Cycle");
-        System.out.println("16. Remove Cycle");
-        System.out.println("17. Quit");
+        System.out.println("13. Quit");
 
     }
 
@@ -102,16 +98,6 @@ public class SingleLinkedListMain {
             case 12:
                 linkedList.bubbleSort();
                 success("Bubble sorting the linked list");
-                break;
-            case 13:
-                break;
-            case 14:
-                break;
-            case 15:
-                break;
-            case 16:
-                break;
-            case 17:
                 break;
         }
     }
