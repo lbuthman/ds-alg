@@ -39,12 +39,11 @@ public class SingleLinkedListMain {
         System.out.println("10. Delete a specific node");
         System.out.println("11. Reverse the list");
         System.out.println("12. Bubble sort by exchanging data");
-        System.out.println("13. Bubble sort by exchanging links");
-        System.out.println("14. Merge sort");
-        System.out.println("15. Insert Cycle");
-        System.out.println("16. Detect Cycle");
-        System.out.println("17. Remove Cycle");
-        System.out.println("18. Quit");
+        System.out.println("13. Merge sort");
+        System.out.println("14. Insert Cycle");
+        System.out.println("15. Detect Cycle");
+        System.out.println("16. Remove Cycle");
+        System.out.println("17. Quit");
 
     }
 
@@ -101,6 +100,8 @@ public class SingleLinkedListMain {
                 success("Reversing the linked list");
                 break;
             case 12:
+                linkedList.bubbleSort();
+                success("Bubble sorting the linked list");
                 break;
             case 13:
                 break;

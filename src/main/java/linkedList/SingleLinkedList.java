@@ -165,4 +165,19 @@ public class SingleLinkedList {
         current.link = prev;
         start = next;
     }
+
+    public void bubbleSort() {
+        Node current, next, end;
+
+        for (end=null; end!=start.link; end=current) {
+            for (current=start; current.link!=end; current=current.link) {
+                next = current.link;
+                if (current.info > next.info) {
+                    int temp = current.info;
+                    current.info = next.info;
+                    next.info = temp;
+                }
+            }
+        }
+    }
 }
